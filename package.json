@@ -1,6 +1,6 @@
 {
   "name": "text2smiles",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Converting text to smiles",
   "keywords": [
     "emoji",
@@ -15,7 +15,8 @@
     "transpile-es2015": "babel src -d lib",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register ./src/tests",
     "test-all": "npm run lint && npm run test",
-    "preinstall": "npm run transpile-es2015"
+    "preinstall": "npm run transpile-es2015",
+    "deploy": "npm run test-all && npm publish"
   },
   "author": "Evgeni Korsunov<5345043@gmail.com>",
   "dependencies": {

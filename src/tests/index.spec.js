@@ -61,7 +61,7 @@ describe('Converting text to smiles:', () => {
     describe('Testing with 4 arguments, text with symbols: X and Y', () => {
       const LETTERS_IN_ROW = 1;
       const TEXT = 'ok';
-      const ROWS_COUNT = ((TEXT.length / LETTERS_IN_ROW) * LETTER_HEIGHT) + 1;
+      const ROWS_COUNT = ((TEXT.length / LETTERS_IN_ROW) * LETTER_HEIGHT);
 
       beforeEach(() => {
         result = convertText2Smiles('ok', 'X', 'Y', LETTERS_IN_ROW);
@@ -81,8 +81,21 @@ describe('Converting text to smiles:', () => {
       });
 
       it('result should be equal template', () => {
-        let template = 'XXXXXX\nXYYYYX\nXYXXYX\nXYXXYX\nXYXXYX\nXYYYYX\nXXXXXX\n';
-        template += 'XXXXXX\nXYXXYX\nXYXYXX\nXYYXXX\nXYXYXX\nXYXXYX\nXXXXXX\n';
+        let template = '';
+
+        template += 'XXXXXX\n';
+        template += 'XXYYXX\n';
+        template += 'XYXXYX\n';
+        template += 'XYXXYX\n';
+        template += 'XYXXYX\n';
+        template += 'XXYYXX\n';
+        template += 'XXXXXX\n';
+        template += 'XYXXYX\n';
+        template += 'XYXYXX\n';
+        template += 'XYYXXX\n';
+        template += 'XYXYXX\n';
+        template += 'XYXXYX\n';
+        template += 'XXXXXX\n';
 
         assert.equal(result, template);
       });
@@ -92,34 +105,31 @@ describe('Converting text to smiles:', () => {
   it('result should be equal template', () => {
     let template = '';
 
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',,@@,,,,@,,,,@,,,,,@,,,,\n';
-    template += ',,@@,,,,@,,,,@,,,,,@,,,,\n';
-    template += ',,@@,,,,,,,,,@,,,,,@,,,,\n';
-    template += ',,@@,,,,,,,,,@,,,,,@,,,,\n';
-    template += ',,@@,,,,,,,,,@@@@,,@@@@,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',,,,,,,@@@,,,@@@@,,,,,,,\n';
-    template += ',,,,,,,@,,@,,@,,,,,,,,,,\n';
-    template += ',,,,,,,@@@,,,@@@,,,,,,,,\n';
-    template += ',,,,,,,@,,@,,@,,,,,,,,,,\n';
-    template += ',,,,,,,@@@,,,@@@@,,,,,,,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',@@@,,,,@@,,,,@@@,,@,,@,\n';
-    template += ',@,,@,,@,,@,,@,,,,,@,@,,\n';
-    template += ',@@@,,,@@@@,,@,,,,,@@,,,\n';
-    template += ',@,,@,,@,,@,,@,,,,,@,@,,\n';
-    template += ',@@@,,,@,,@,,,@@@,,@,,@,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',,,,,,,,@@,,,,@@,,,,@@,,\n';
-    template += ',,,,,,,,@@,,,,@@,,,,@@,,\n';
-    template += ',,,,,,,,@@,,,,@@,,,,@@,,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
-    template += ',,,,,,,,@@,,,,@@,,,,@@,,\n';
-    template += ',,,,,,,,,,,,,,,,,,,,,,,,\n';
+    template += ',,,,,,,,,,,,,,,,,,,,,\n';
+    template += ',,@@,,,@,,,@,,,,@,,,,\n';
+    template += ',,@@,,,@,,,@,,,,@,,,,\n';
+    template += ',,@@,,,,,,,@,,,,@,,,,\n';
+    template += ',,@@,,,,,,,@,,,,@,,,,\n';
+    template += ',,@@,,,,,,,@@@@,@@@@,\n';
+    template += ',,,,,,,,,,,,,,,,,,,,,\n';
+    template += ',,,,,,@@@,,@@@@,,,,,,\n';
+    template += ',,,,,,@,,@,@,,,,,,,,,\n';
+    template += ',,,,,,@@@,,@@@,,,,,,,\n';
+    template += ',,,,,,@,,@,@,,,,,,,,,\n';
+    template += ',,,,,,@@@,,@@@@,,,,,,\n';
+    template += ',,,,,,,,,,,,,,,,,,,,,\n';
+    template += ',@@@,,,@@,,,@@@,@,,@,\n';
+    template += ',@,,@,@,,@,@,,,,@,@,,\n';
+    template += ',@@@,,@@@@,@,,,,@@,,,\n';
+    template += ',@,,@,@,,@,@,,,,@,@,,\n';
+    template += ',@@@,,@,,@,,@@@,@,,@,\n';
+    template += ',,,,,,,,,,,,,,,,,,,,,\n';
+    template += ',,,,,,,@@,,,@@,,,@@,,\n';
+    template += ',,,,,,,@@,,,@@,,,@@,,\n';
+    template += ',,,,,,,@@,,,@@,,,@@,,\n';
+    template += ',,,,,,,,,,,,,,,,,,,,,\n';
+    template += ',,,,,,,@@,,,@@,,,@@,,\n';
+    template += ',,,,,,,,,,,,,,,,,,,,,\n';
 
     result = convertText2Smiles('I\'LL BE BACK^!!!', ',', '@', 4);
 
