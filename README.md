@@ -1,11 +1,6 @@
 # Text 2 smiles
 
-<p>
-  <a href="https://www.npmjs.com/package/text2smiles"><img alt="NPM version" src="https://img.shields.io/npm/v/text2smiles.svg" /></a>
-  <a href="https://david-dm.org/sensone/text2smiles"><img alt="Dependency Status" src="https://img.shields.io/david/sensone/text2smiles/master.svg" /></a>
-  <a href="https://david-dm.org/sensone/text2smiles?type=dev"><img alt="Dev Dependency Status" src="https://img.shields.io/david/dev/sensone/text2smiles/master.svg" /></a>
-  <a href="https://www.npmjs.com/package/text2smiles"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/text2smiles.svg" /></a>
-</p>
+[![Build Status](https://travis-ci.org/sensone/text2smiles.svg?branch=master)](https://travis-ci.org/sensone/text2smiles)  [![codecov](https://codecov.io/gh/sensone/text2smiles/branch/master/graph/badge.svg)](https://codecov.io/gh/sensone/text2smiles) [![NPM version](https://img.shields.io/npm/v/text2smiles.svg)](https://www.npmjs.com/package/text2smiles) [![Dependency Status](https://img.shields.io/david/sensone/text2smiles/master.svg)](https://david-dm.org/sensone/text2smiles) [![Dev dependency Status](https://img.shields.io/david/dev/sensone/text2smiles/master.svg)](https://david-dm.org/sensone/text2smiles?type=dev) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 Special text converter for easy converting text to something like this:
 
