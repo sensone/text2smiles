@@ -3,3 +3,7 @@ logs
 npm-debug.log*
 node_modules
 coverage
+src
+.travis.yml
+.eslintrc
+lib/tests
