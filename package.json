@@ -16,7 +16,7 @@
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register ./src/tests",
     "deploy": "npm run test-all && npm publish",
     "lint": "./node_modules/.bin/eslint ./src",
-    "build": "babel src -d lib",
+    "prepublish": "babel src --out-dir lib",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register ./src/tests",
     "test-all": "npm run lint && npm run coverage",
