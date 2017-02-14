@@ -12,8 +12,8 @@ before_script:
   - npm prune
 script:
   - npm run test-all
-after_success:
   - npm run build
+after_success:
   - npm run report-coverage
   - npm run semantic-release
 branches:
