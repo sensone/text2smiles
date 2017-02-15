@@ -36,7 +36,7 @@ convertText2Smiles(text, [backgroundSmile = '🤘', textSmile = '💀', countSym
 
 ```javascript
 // var convertText2Smiles = require('text2smiles').default;
-import convertText2Smiles from 'text-of-smiles';
+import convertText2Smiles from 'text2smiles';
 
 // should display the text above
 console.log(convertText2Smiles('hello, world', '👀', '🌚', 6));
